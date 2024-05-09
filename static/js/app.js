@@ -106,7 +106,6 @@ function init() {
 // Function for event listener
 function optionChanged(newSample) {
   // Build charts and metadata panel each time a new sample is selected
-  buildMetadata(newSample);
   buildCharts(newSample);
   buildMetadata(newSample);
 }

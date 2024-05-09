@@ -39,6 +39,8 @@ function buildCharts(sample) {
     let bubbleData = [{
       x: otuIds,
       y: sampleValues,
+      xaxis: {title: "OTU ID"},
+      yaxis: {title: "Number of Bacteria"},
       text: otuLabels,
       mode: 'markers',
       marker: {
@@ -50,7 +52,9 @@ function buildCharts(sample) {
 
     // Render the Bubble Chart
     let bubbleLayout = {
-      title: 'Bacteria Cultures per Sample'
+      title: 'Bacteria Cultures per Sample',
+      xaxis: {title: "OTU ID"},
+      yaxis: {title: "Number of Bacteria"},
     };
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
@@ -71,7 +75,9 @@ function buildCharts(sample) {
     
     // Render the Bar Chart
     let barLayout = {
-      title: 'Top 10 Bacteria Cultures Found'
+      title: 'Top 10 Bacteria Cultures Found',
+      xaxis: {title: "Number of Bacteria"},
+      yaxis: {title: "OTU ID"},
     };
     Plotly.newPlot('bar', barData, barLayout);
   });
